@@ -1,4 +1,4 @@
-from .EEGStressDetector import EEGStressDetector
+from .utils.EEGStressDetector import EEGStressDetector
 import numpy as np
 
 def process_data(samples):
