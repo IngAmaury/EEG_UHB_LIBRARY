@@ -25,3 +25,6 @@ dist/
 # Otros
 .DS_Store
 *.bak
+
+.pypirc
+.gitignore
