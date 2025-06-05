@@ -1,4 +1,5 @@
 from eeg_uhb.acquisition import EEGAcquisitionManager
+import time
 
 if __name__ == "__main__":
     EEG = EEGAcquisitionManager()
