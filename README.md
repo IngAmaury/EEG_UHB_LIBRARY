@@ -1,65 +1,64 @@
 # EEG_UHB
 
-Librería para adquisición y procesamiento de señales Electroencefalografía (EEG) utilizando el equipo comercial Unicorn Hybrid Black (UHB) usando Lab Streaming Layer (LSL).
+Library for Electroencephalography (EEG) signal acquisition and processing using Unicorn Hybrid Black (UHB) commercial equipment using Lab Streaming Layer (LSL).
 
-## Instalación
+## Install
 
-Puedes instalar la librería directamente desde PyPI usando pip:
+You can install the library directly from PyPI using pip:
 
 ```bash
 pip install eeg-uhb
 ```
 
-## Instalación desde GitHub (opcional)
+## Installation from GitHub (optional)
 
-Si deseas instalar la versión más reciente directamente desde el repositorio, ejecuta:
+If you want to install the latest version directly from the repository, run:
 
 ```bash
 pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 ```
 
-### Instalación en un entorno virtual en Python
+### Installation in a Python virtual environment
 
-1. Abra una terminal o Anaconda Prompt.
+1. Open a terminal or Anaconda Prompt.
 2. Cree un nuevo entorno virtual (por ejemplo, llamado myenv):
 ```bash
 python -m venv myenv
 ```
-- Utilizando Anaconda Prompt:
-```bash
-conda create --name myenv python=3.8
-```
-3. Active el entorno virtual:
-    - En Windows:
+   - Using Anaconda Prompt:
+    ```bash
+    conda create --name myenv python=3.8
+    ```
+3. Enable the virtual environment:
+    - Windows:
     ```bash
     myenv\Scripts\activate
     ```
-    - En Anaconda Prompt:
+    - Anaconda Prompt:
     ```bash
     conda activate myenv
     ```
-    - En En macOS/Linux::
+    - macOS/Linux::
     ```bash
     source myenv/bin/activate
     ```
-4. Instale la librería dentro del entorno virtual:
+4. Install the library inside the virtual environment:
 ```bash
-pip install eeg-uhb
+(myenv) pip install eeg-uhb
 ```
 
 > [!NOTE]
-> Se recomienda realizar la instalación en un entorno virtual para evitar conflictos con otras librerías del sistema.
+> It is recommended to install in a virtual environment to avoid conflicts with other system libraries.
 
-## Dependencias
+## Dependencies
 
-La librería requiere las siguientes dependencias, que se instalarán automáticamente con pip:
-
+The library requires the following dependencies, which will be installed automatically with pip:
 - numpy
 - pylsl
 - scipy
 - scikit-fuzzy
 
-## Uso
+## Use
 
 ```python
 from eeg_uhb.acquisition import EEGAcquisitionManager
