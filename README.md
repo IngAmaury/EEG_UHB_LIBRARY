@@ -18,6 +18,37 @@ Si deseas instalar la versión más reciente directamente desde el repositorio, 
 pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 ```
 
+### Instalación en un entorno virtual en Python
+
+1. Abra una terminal o Anaconda Prompt.
+2. Cree un nuevo entorno virtual (por ejemplo, llamado myenv):
+```bash
+python -m venv myenv
+```
+    - Utilizando Anaconda Prompt:
+    ```bash
+    conda create --name myenv python=3.8
+    ```
+3. Active el entorno virtual:
+    - En Windows:
+    ```bash
+    myenv\Scripts\activate
+    ```
+    - En Anaconda Prompt:
+    ```bash
+    conda activate myenv
+    ```
+    -En En macOS/Linux::
+    ```bash
+    source myenv/bin/activate
+    ```
+4. Instale la librería dentro del entorno virtual:
+```bash
+pip install eeg-uhb
+```
+
+> **Nota:** Se recomienda realizar la instalación en un entorno virtual para evitar conflictos con otras librerías del sistema.
+
 ## Dependencias
 
 La librería requiere las siguientes dependencias, que se instalarán automáticamente con pip:
@@ -42,3 +73,4 @@ eeg_manager.stop_acquisition(save_path="./data", username="user")
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.  
 See the LICENSE file for details.
+
