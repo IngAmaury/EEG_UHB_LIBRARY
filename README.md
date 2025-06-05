@@ -11,6 +11,7 @@ eeg_manager = EEGAcquisitionManager()
 eeg_manager.start_acquisition()
 # ...
 eeg_manager.stop_acquisition(save_path="./data", username="user")
+```
 
 ## License
 
