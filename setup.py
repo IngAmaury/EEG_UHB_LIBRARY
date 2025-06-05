@@ -14,10 +14,12 @@ setup(
         "scipy==1.13.1",
         "scikit-fuzzy==0.5.0"
     ],
+    license="Creative Commons Attribution-NonCommercial 4.0 International License",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: Other/Proprietary License",
         "Operating System :: OS Independent",
     ],
     python_requires=">=3.7",
+    include_package_data=True
 )

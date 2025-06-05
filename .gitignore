@@ -1,0 +1,27 @@
+# Carpetas temporales
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos generados por compilación o por PyInstaller
+build/
+dist/
+*.egg-info/
+
+# Archivos de logs y bases de datos
+*.log
+*.sqlite
+*.db
+
+# Archivos de entorno virtual
+.env/
+.venv/
+
+# Archivos de configuración de IDE (VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Otros
+.DS_Store
+*.bak
