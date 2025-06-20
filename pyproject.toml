@@ -1,3 +1,33 @@
 [build-system]
 requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "eeg_uhb"
+version = "0.1.1"
+description = "Librería modular para adquisición y procesamiento EEG de UHB"
+authors = [
+    {name = "Amaury Santiago Horta", email = "asantiagoh2300@alumno.ipn.mx"}
+]
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "Creative Commons Attribution-NonCommercial 4.0 International License"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy==1.26.4",
+    "pylsl==1.15.0",
+    "scipy==1.13.1",
+    "scikit-fuzzy==0.5.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/IngAmaury/EEG_UHB_LIBRARY"
+
+[tool.setuptools]
+packages = {find = {where = ["src"]}}
+package-dir = {"" = "src"}
+include-package-data = true

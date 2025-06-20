@@ -1,4 +1,4 @@
-from eeg_uhb.acquisition import EEGAcquisitionManager
+from src.eeg_uhb.acquisition import EEGAcquisitionManager
 import time
 
 if __name__ == "__main__":
