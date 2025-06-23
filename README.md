@@ -61,12 +61,20 @@ The library requires the following dependencies, which will be installed automat
 ## Use
 
 ```python
-from eeg_uhb.acquisition import EEGAcquisitionManager
+from eeg_uhb import EEGAcquisitionManager
+import time
 
-eeg_manager = EEGAcquisitionManager()
-eeg_manager.start_acquisition()
-# ...
-eeg_manager.stop_acquisition(save_path="./data", username="user")
+if __name__=='__main__':
+    EEG = EEGAcquisitionManager()
+    start_time = time.time()
+    duration = 0.04  # segundos
+    
+    # the stream_name depends on the one you choose
+    EEG.start_acquisition(stream_name='UN-2023.07.40')
+    start = time.sleep(duration)
+    print(EEG.data)
+    print(f'Length: {len(EEG.data)}')
+    EEG.stop_acquisition()
 ```
 
 ## License
