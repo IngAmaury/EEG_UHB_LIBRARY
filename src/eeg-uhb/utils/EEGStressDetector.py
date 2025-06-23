@@ -78,14 +78,15 @@ Notas:
 - Se recomienda una frecuencia de muestreo de 250 Hz para mejores resultados.
 - La evaluación del estrés difuso está basada en estudios EEG y puede ajustarse según el contexto de aplicación.
 """
-import numpy as np
-from scipy.signal import filtfilt
-import time
-import pickle
-import skfuzzy as fuzz
 from collections import Counter
+from scipy.signal import filtfilt
 from typing import Union, Dict, Any, Tuple, List
+import numpy as np
 import os
+import pickle
+import pkg_resources
+import skfuzzy as fuzz
+import time
 
 def measureRunTime(funcion):
     """
@@ -119,16 +120,11 @@ class EEGStressDetector:
     """
     Clase para el procesamiento y análisis de señales EEG con métodos de filtrado, eliminación de artefactos y extracción de características.
     """
-
-    # Obtener la ruta absoluta del directorio actual del script
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    resources_dir = os.path.join(current_dir, "..", "resources")
-    resources_dir = os.path.abspath(resources_dir)
-    fuzzy_path = os.path.join(resources_dir, "Fuzzy_Systems.pkl")
-    coefficient_filters_path = os.path.join(resources_dir,'coefficient_filters_dict.pkl')
+    coefficient_filters_path = pkg_resources.resource_filename("eeg_uhb.resources", "coefficient_filters_dict.pkl")
+    resource_pkl_path = pkg_resources.resource_filename("eeg_uhb.resources", "Fuzzy_Systems.pkl")
 
     @staticmethod
-    def load_fuzzy_system(pkl_file: str = fuzzy_path, system_name: str = "Sistema 1", onlySystem: bool = True) -> Union[Any, Dict[str, Any]]:
+    def load_fuzzy_system(pkl_file: str = resource_pkl_path, system_name: str = "Sistema 1", onlySystem: bool = True) -> Union[Any, Dict[str, Any]]:
         """
         Carga un sistema difuso desde un archivo `.pkl` y retorna el sistema solicitado.
 
@@ -181,7 +177,8 @@ class EEGStressDetector:
         try:
             # Cargar el diccionario de sistemas difusos
             with open(pkl_file, "rb") as archivo:
-                sistemas_difusos: Dict[str, Dict[str, Any]] = pickle.load(archivo)
+                sistemas_difusos = pickle.load(archivo)
+
 
             # Verificar si el sistema solicitado está en el diccionario
             if system_name not in sistemas_difusos:
