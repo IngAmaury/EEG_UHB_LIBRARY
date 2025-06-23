@@ -32,4 +32,4 @@ package-dir = {"" = "src"}
 include-package-data = true
 
 [tool.setuptools.package-data]
-"eeg-uhb.resources" = ["*.pkl"]
+"eeg_uhb.resources" = ["*.pkl"]
