@@ -21,7 +21,7 @@ dist/
 # Archivos de configuración de IDE (VSCode, PyCharm)
 .vscode/
 .idea/
-.code-workspace
+EEG_UHB_library.code-workspace
 
 # Otros
 .DS_Store
