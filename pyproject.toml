@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eeg_uhb"
-version = "0.1.2"
+version = "0.1.3"
 description = "Librería modular para adquisición y procesamiento EEG de UHB"
 authors = [
     {name = "Amaury Santiago Horta", email = "asantiagoh2300@alumno.ipn.mx"}
@@ -29,4 +29,4 @@ Homepage = "https://github.com/IngAmaury/EEG_UHB_LIBRARY"
 [tool.setuptools]
 packages = {find = {where = ["src"]}}
 package-dir = {"" = "src"}
-include-package-data = false
+include-package-data = true
