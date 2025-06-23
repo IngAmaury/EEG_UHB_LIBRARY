@@ -22,29 +22,40 @@ pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 
 1. Open a terminal or Anaconda Prompt.
 2. Create a new virtual environment (for example: myenv):
+
 ```bash
 python -m venv myenv
 ```
+
    - Using Anaconda Prompt:
+
     ```bash
-    conda create --name myenv python=3.8
+    conda create --name myenv
     ```
+
 3. Enable the virtual environment:
     - Windows:
+
     ```bash
     myenv\Scripts\activate
     ```
+
     - Anaconda Prompt:
+
     ```bash
     conda activate myenv
     ```
-    - macOS/Linux::
+
+    - macOS/Linux:
+
     ```bash
     source myenv/bin/activate
     ```
+
 4. Install the library inside the virtual environment:
+
 ```bash
-(myenv) pip install eeg-uhb
+pip install eeg-uhb
 ```
 
 > [!NOTE]
