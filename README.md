@@ -110,7 +110,7 @@ if __name__=='__main__':
 
 If you are acquiring through the Unicorn Recorder App, see the image below, you can use the example code below the image, you must not put anything in start_acquisition in the stream_name attribute as the app assigns one internally, the other attributes can be used as normal.
 
-![Unicorn Recorder App acquisition tool](docs/images/UnicornLSL.png)
+![Unicorn Recorder App acquisition tool](docs/images/UnicornRecorder.png)
 
 ```python
 from eeg_uhb import EEGAcquisitionManager
@@ -122,7 +122,6 @@ if __name__=='__main__':
     duration = 0.04  # segundos
 
     '''
-    eeg.start_acquisition(stream_name=None)  
     # Connect stream and save data
     eeg.start_acquisition(save=True, save_path='./eeg_data/')
     '''
