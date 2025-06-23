@@ -141,7 +141,7 @@ class EEGAcquisitionManager:
         Args:
             save: If True, the data will be stored.
             save_path: Path to save data (optional)
-            only_acquisition: If True, it only acquires data without processing.
+            process: If True, it acquires data with processing for stress studies.
         """
         try:
             # Configuración inicial
