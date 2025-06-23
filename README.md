@@ -111,10 +111,8 @@ if __name__=='__main__':
     duration = 0.04  # segundos
 
     '''
-    # Connect to any available stream without saving
     eeg.start_acquisition(stream_name=None)  
-
-    # Connect to specific stream and save data
+    # Connect stream and save data
     eeg.start_acquisition(save=True, save_path='./eeg_data/')
     '''
     
