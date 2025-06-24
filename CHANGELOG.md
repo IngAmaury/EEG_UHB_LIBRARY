@@ -7,6 +7,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - Support for multiple EEG devices (experimental)
 
+## [0.1.7] - 2024-07-18
+### Fixed
+- Added missing `networkx` dependency required by `scikit-fuzzy`
+- Corrected resource loading in Windows environments
+
 ## [0.1.6] - 2024-07-18
 ### Fixed
 - Critical resource loading issue for `.pkl` files
