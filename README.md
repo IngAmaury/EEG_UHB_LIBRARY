@@ -136,7 +136,7 @@ if __name__=='__main__':
 
 ## Upgrade or uninstall
 
-Already had an older version of the library, I updated to the latest version with the code:
+Already had an older version of the library, you can updated to the latest version with the code:
 
 ```bash
 pip install --upgrade eeg-uhb
