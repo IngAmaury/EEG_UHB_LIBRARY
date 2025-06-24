@@ -16,6 +16,9 @@ Library for Electroencephalography (EEG) signal acquisition and processing using
 
 ## ⏬ Install <a name="install"></a>
 
+> [!NOTE]
+> It is recommended to install in a virtual environment to avoid conflicts with other system libraries.
+
 You can install the library directly from PyPI using pip:
 
 ```bash
@@ -69,9 +72,6 @@ source myenv/bin/activate
 ```bash
 pip install eeg-uhb
 ```
-
-> [!NOTE]
-> It is recommended to install in a virtual environment to avoid conflicts with other system libraries.
 
 ### 🔨 Dependencies <a name="requirements"></a>
 
