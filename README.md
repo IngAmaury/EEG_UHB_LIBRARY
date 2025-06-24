@@ -183,7 +183,7 @@ eeg = EEGAcquisitionManager()
 | `start_time`     | `float`    | Time from the beginning of the acquisition in UTC format.      |
 | `timestamps`     | `list`     | List of temporary marks by sample list (relative time in utc format).  |
 
-### Class Methods <a name="methods"></a>
+### 🟢 Class Methods <a name="methods"></a>
 
 Methods within EEGAcquisitionManager Class.
 
