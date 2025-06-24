@@ -14,7 +14,7 @@ import time
 class EEGAcquisitionManager:
     def __init__(self, buffer_size=500, callback=None):
         """
-       Initializes the EEG acquisition system.
+        Initializes the EEG acquisition system.
         
         Args:
             buffer_size: Buffer size for processing (samples)
