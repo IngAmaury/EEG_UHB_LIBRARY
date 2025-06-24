@@ -61,12 +61,6 @@ pip install eeg-uhb
 > [!NOTE]
 > It is recommended to install in a virtual environment to avoid conflicts with other system libraries.
 
-Already had an older version of the library, I updated to the latest version with the code:
-
-```bash
-pip install --upgrade eeg-uhb
-```
-
 ## Dependencies
 
 The library requires the following dependencies, which will be installed automatically with pip:
@@ -138,6 +132,20 @@ if __name__=='__main__':
     print(EEG.data)
     print(f'Length: {len(EEG.data)}')
     EEG.stop_acquisition()
+```
+
+## Upgrade or unistall
+
+Already had an older version of the library, I updated to the latest version with the code:
+
+```bash
+pip install --upgrade eeg-uhb
+```
+
+If you no longer wish to have the library installed, activate the virtual environment where you installed it and run it:
+
+```bash
+pip uninstall eeg-uhb -y
 ```
 
 ## License
