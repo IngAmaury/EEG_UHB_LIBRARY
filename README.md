@@ -1,4 +1,4 @@
-# EEG_UHB
+# 💻🧠🦄 EEG_UHB
 
 Library for Electroencephalography (EEG) signal acquisition and processing using Unicorn Hybrid Black (UHB) commercial equipment using Lab Streaming Layer (LSL).
 
@@ -14,7 +14,7 @@ Library for Electroencephalography (EEG) signal acquisition and processing using
   - [Methods](#métodos)
 - [License](#license)
 
-## Install <a name="install"></a>
+## ⏬ Install <a name="install"></a>
 
 You can install the library directly from PyPI using pip:
 
@@ -22,7 +22,7 @@ You can install the library directly from PyPI using pip:
 pip install eeg-uhb
 ```
 
-### Installation from GitHub (optional) <a name="fromGithub"></a>
+### :octocat: Installation from GitHub (optional) <a name="fromGithub"></a>
 
 If you want to install the latest version directly from the repository, run:
 
@@ -30,7 +30,7 @@ If you want to install the latest version directly from the repository, run:
 pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 ```
 
-### Installation in a Python virtual environment <a name="inEnv"></a>
+### 🐍 Installation in a Python virtual environment <a name="inEnv"></a>
 
 1. Open a terminal or Anaconda Prompt.
 2. Create a new virtual environment (for example: myenv):
@@ -73,7 +73,7 @@ pip install eeg-uhb
 > [!NOTE]
 > It is recommended to install in a virtual environment to avoid conflicts with other system libraries.
 
-### Dependencies <a name="requirements"></a>
+### 🔨 Dependencies <a name="requirements"></a>
 
 The library requires the following dependencies, which will be installed automatically with pip:
 - numpy
@@ -84,7 +84,7 @@ The library requires the following dependencies, which will be installed automat
 > [!IMPORTANT]
 > If you want to make the acquisition with Unicorn Hybrid Black you need to install [Unicorn Suite Hybrid Black](https://github.com/unicorn-bi/Unicorn-Suite-Hybrid-Black-User-Manual/blob/main/UnicornSuite.md#install-unicorn-suite-hybrid-black), You can also watch their [video tutorial](https://www.youtube.com/watch?v=LOfIr2F7-Tc). Within the application, you will need to install the Unicorn Recorder from the Apps section or the Unicorn LSL from the DevTools section.
 
-## Upgrade or uninstall <a name="upgrade-uninstall"></a>
+## 🔄 Upgrade or uninstall <a name="upgrade-uninstall"></a>
 
 Already had an older version of the library, you can updated to the latest version with the code:
 
@@ -98,7 +98,7 @@ If you no longer wish to have the library installed, activate the virtual enviro
 pip uninstall eeg-uhb -y
 ```
 
-## Use example <a name="example"></a>
+## 🎯 Use example <a name="example"></a>
 
 If you are acquiring through the Unicorn LSL Interface, see the image below, you can use the example code below the image, you must put in the start_adquisition function in the stream_name attribute the same name that you put in the “Streamname” box inside the LSL settings of the Unicorn LSL.
 
@@ -170,7 +170,7 @@ from eeg_uhb import EEGAcquisitionManager
 eeg = EEGAcquisitionManager()
 ```
 
-### Class attributes <a name="attributes"></a>
+### 🔷 Class attributes <a name="attributes"></a>
 
 | Attributes         | Type       | Description                          |
 |------------------|------------|--------------------------------------|
@@ -187,7 +187,7 @@ eeg = EEGAcquisitionManager()
 
 Methods within EEGAcquisitionManager Class.
 
-#### `resolve_eeg_stream(name: None | str = None, timeout=1)`
+#### 🔵 `resolve_eeg_stream(name = None, timeout = 1)`
 
 Static method that searches and resolves an EEG data stream available through the **Lab Streaming Layer (LSL)** protocol.
 
@@ -205,7 +205,7 @@ from eeg_uhb import EEGAcquisitionManager
 stream = EEGAcquisitionManager.resolve_eeg_stream()
 ```
 
-#### `start_acquisition(stream_name = None, save = False, save_path = None)`
+#### 🔵 `start_acquisition(stream_name = None, save = False, save_path = None)`
 
 Starts EEG data acquisition.
 
@@ -224,7 +224,7 @@ eeg.start_acquisition(
 )
 ```
 
-#### `stop_acquisition()`
+#### 🔵 `stop_acquisition()`
 Stops the acquisition and closes open files.
 
 **Example:**
@@ -235,7 +235,7 @@ eeg.stop_acquisition(
 )
 ```
 
-## License <a name="license"></a>
+## 📜 License <a name="license"></a>
 
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.  
 See the LICENSE file for details.
