@@ -17,7 +17,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    "networkx>=3.0"
+    "networkx>=3.0",
     "numpy>=1.21,<1.25",
     "pylsl==1.15.0",
     "scikit-fuzzy==0.5.0",
