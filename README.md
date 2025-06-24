@@ -134,7 +134,7 @@ if __name__=='__main__':
     EEG.stop_acquisition()
 ```
 
-## Upgrade or unistall
+## Upgrade or uninstall
 
 Already had an older version of the library, I updated to the latest version with the code:
 
