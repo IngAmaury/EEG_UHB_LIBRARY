@@ -4,11 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eeg-uhb"
-version = "0.1.4"
+version = "0.1.5"
 description = "Librería modular para adquisición y procesamiento EEG de UHB"
-authors = [
-    {name = "Amaury Santiago Horta", email = "asantiagoh2300@alumno.ipn.mx"}
-]
+author = "Amaury Santiago Horta"
+author-email = "asantiagoh2300@alumno.ipn.mx"
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
