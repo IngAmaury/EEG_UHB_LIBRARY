@@ -82,9 +82,9 @@ from collections import Counter
 from scipy.signal import filtfilt
 from typing import Union, Dict, Any, Tuple, List
 import numpy as np
-import os
 import pickle
-import pkg_resources
+from importlib.resources import files
+from eeg_uhb import resources
 import skfuzzy as fuzz
 import time
 
@@ -120,11 +120,9 @@ class EEGStressDetector:
     """
     Clase para el procesamiento y análisis de señales EEG con métodos de filtrado, eliminación de artefactos y extracción de características.
     """
-    coefficient_filters_path = pkg_resources.resource_filename("eeg_uhb.resources", "coefficient_filters_dict.pkl")
-    resource_pkl_path = pkg_resources.resource_filename("eeg_uhb.resources", "Fuzzy_Systems.pkl")
 
     @staticmethod
-    def load_fuzzy_system(pkl_file: str = resource_pkl_path, system_name: str = "Sistema 1", onlySystem: bool = True) -> Union[Any, Dict[str, Any]]:
+    def load_fuzzy_system(pkl_filename: str = "Fuzzy_Systems.pkl", system_name: str = "Sistema 1", onlySystem: bool = True) -> Union[Any, Dict[str, Any]]:
         """
         Carga un sistema difuso desde un archivo `.pkl` y retorna el sistema solicitado.
 
@@ -133,7 +131,7 @@ class EEGStressDetector:
 
         Parámetros:
         -----------
-        pkl_file : str
+        pkl_filename : str
             Ruta del archivo `.pkl` que contiene los sistemas difusos serializados.
         
         system_name : str
@@ -175,35 +173,31 @@ class EEGStressDetector:
         { "Sistema X": { "system": objeto_sistema, "description": "texto descriptivo" }, ... }
         """
         try:
-            # Cargar el diccionario de sistemas difusos
-            with open(pkl_file, "rb") as archivo:
+            # Carga desde los recursos del paquete
+            with files("eeg_uhb.resources").joinpath(pkl_filename).open("rb") as archivo:
                 sistemas_difusos = pickle.load(archivo)
-
+            print('Modelo difuso cargado')
 
             # Verificar si el sistema solicitado está en el diccionario
             if system_name not in sistemas_difusos:
-                raise KeyError(f"El sistema '{system_name}' no se encuentra en el archivo '{pkl_file}'.")
+                raise KeyError(f"El sistema '{system_name}' no se encuentra en el archivo '{pkl_filename}'.")
 
             # Retornar según la opción onlySystem
             if onlySystem:
                 return sistemas_difusos[system_name]["system"]
             else:
                 return sistemas_difusos[system_name]  # Devuelve todo el diccionario { "system": ..., "description": ... }
-            print('Modelo difuso cargado')
-            
-
         except FileNotFoundError:
-            raise FileNotFoundError(f"El archivo '{pkl_file}' no fue encontrado.")
+            raise FileNotFoundError(f"El archivo '{pkl_filename}' no fue encontrado.")
         except KeyError as e:
             raise KeyError(str(e))
         except pickle.UnpicklingError:
-            raise ValueError(f"Error al deserializar el archivo '{pkl_file}'. Asegúrate de que sea un archivo pickle válido.")
+            raise ValueError(f"Error al deserializar el archivo '{pkl_filename}'. Asegúrate de que sea un archivo pickle válido.")
         except Exception as e:
-            raise RuntimeError(f"Ocurrió un error al cargar el sistema difuso desde '{pkl_file}': {e}")
-
+            raise RuntimeError(f"Ocurrió un error al cargar el sistema difuso desde '{pkl_filename}': {e}")
 
     @staticmethod
-    def load_dict_coefficient_filters(pkl_file: str = coefficient_filters_path) -> dict:
+    def load_dict_coefficient_filters(pkl_filename: str = "coefficient_filters_dict.pkl") -> dict:
         """
         Carga un diccionario desde un archivo en formato `.pkl`.
 
@@ -213,7 +207,7 @@ class EEGStressDetector:
 
         Parámetros:
         -----------
-        pkl_file : str, opcional
+        pkl_filename : str, opcional
             Ruta del archivo `.pkl` que contiene el diccionario serializado.
             Por defecto, se asume 'coefficient_filters_dict.pkl'.
 
@@ -254,14 +248,14 @@ class EEGStressDetector:
           que el archivo EEGStressDetector.py.
         """
         try:
-            with open(pkl_file, "rb") as archivo:
+            with files("eeg_uhb.resources").joinpath(pkl_filename).open("rb") as archivo:
                 return pickle.load(archivo)
         except FileNotFoundError:
-            raise FileNotFoundError(f"El archivo '{pkl_file}' no fue encontrado.")
+            raise FileNotFoundError(f"El archivo '{pkl_filename}' no fue encontrado.")
         except pickle.UnpicklingError:
-            raise ValueError(f"Error al deserializar el archivo '{pkl_file}'. Asegúrate de que sea un archivo pickle válido.")
+            raise ValueError(f"Error al deserializar el archivo '{pkl_filename}'. Asegúrate de que sea un archivo pickle válido.")
         except Exception as e:
-            raise RuntimeError(f"Ocurrió un error al cargar el diccionario desde '{pkl_file}': {e}")
+            raise RuntimeError(f"Ocurrió un error al cargar el diccionario desde '{pkl_filename}': {e}")
 
     @staticmethod
     def energy(signal, axis=0):
