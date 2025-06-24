@@ -11,7 +11,7 @@ Library for Electroencephalography (EEG) signal acquisition and processing using
 - [Use Example](#example)
 - [Class EEGAcquisitionManager](#eegacquisitionmanager)
   - [Attributes](#attributes)
-  - [Methods](#métodos)
+  - [Methods](#methods)
 - [License](#license)
 
 ## ⏬ Install <a name="install"></a>
@@ -22,7 +22,7 @@ You can install the library directly from PyPI using pip:
 pip install eeg-uhb
 ```
 
-### :octocat: Installation from GitHub (optional) <a name="fromGithub"></a>
+### :octocat: <a name="fromGithub"></a> Installation from GitHub (optional) 
 
 If you want to install the latest version directly from the repository, run:
 
@@ -30,7 +30,7 @@ If you want to install the latest version directly from the repository, run:
 pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 ```
 
-### 🐍 Installation in a Python virtual environment <a name="inEnv"></a>
+### 🐍 <a name="inEnv"></a> Installation in a Python virtual environment 
 
 1. Open a terminal or Anaconda Prompt.
 2. Create a new virtual environment (for example: myenv):
