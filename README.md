@@ -38,6 +38,8 @@ pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 1. Open a terminal or Anaconda Prompt.
 2. Create a new virtual environment (for example: myenv):
 
+- Using a Command Prompt (Windows/Linux/Mac):
+
 ```bash
 python -m venv myenv
 ```
@@ -81,7 +83,7 @@ The library requires the following dependencies, which will be installed automat
 - scipy
 - scikit-fuzzy
 
-> [!IMPORTANT]
+> [!IMPORTANT] ‼
 > If you want to make the acquisition with Unicorn Hybrid Black you need to install [Unicorn Suite Hybrid Black](https://github.com/unicorn-bi/Unicorn-Suite-Hybrid-Black-User-Manual/blob/main/UnicornSuite.md#install-unicorn-suite-hybrid-black), You can also watch their [video tutorial](https://www.youtube.com/watch?v=LOfIr2F7-Tc). Within the application, you will need to install the Unicorn Recorder from the Apps section or the Unicorn LSL from the DevTools section.
 
 ## 🔄 Upgrade or uninstall <a name="upgrade-uninstall"></a>
