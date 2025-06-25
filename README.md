@@ -17,7 +17,7 @@ Library for Electroencephalography (EEG) signal acquisition and processing using
 ## ⏬ Install <a name="install"></a>
 
 > [!NOTE]
-> It is recommended to install in a virtual environment to avoid conflicts with other system libraries.
+> You should install it in a virtual environment to avoid conflicts with other system libraries. If you do not know the procedure to do it in a virtual environment go directly to the “Installation in a Python virtual environment” subsection of this “Install” section.
 
 You can install the library directly from PyPI using pip:
 
