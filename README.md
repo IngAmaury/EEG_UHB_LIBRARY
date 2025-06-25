@@ -198,7 +198,7 @@ Static method that searches and resolves an EEG data stream available through th
 
 **Parameters:**
 - `name` *(None | str)*: Specific name of the EEG stream to search for. If `None`, it will search by default for a stream of type `EEG`.
-- `timeout` *(int, opcional)*: Maximum waiting time (in seconds) to resolve the flow (default: 1).
+- `timeout` *(float)*: Maximum waiting time (in seconds) to resolve the flow (default: 1).
 
 **Return**:
 - Returns the EEG stream found or an empty list if none is found.
