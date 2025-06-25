@@ -83,11 +83,11 @@ The library requires the following dependencies, which will be installed automat
 - scipy
 - scikit-fuzzy
   
-  🔻🔻🔻
+🔻🔻🔻
 > [!IMPORTANT]
 > If you want to make the acquisition with Unicorn Hybrid Black you need to install [Unicorn Suite Hybrid Black](https://github.com/unicorn-bi/Unicorn-Suite-Hybrid-Black-User-Manual/blob/main/UnicornSuite.md#install-unicorn-suite-hybrid-black), You can also watch their [video tutorial](https://www.youtube.com/watch?v=LOfIr2F7-Tc). Within the application, you will need to install the Unicorn Recorder from the Apps section or the Unicorn LSL from the DevTools section.
   
-  🔺🔺🔺
+🔺🔺🔺
 
 ## 🔄 Upgrade or uninstall <a name="upgrade-uninstall"></a>
 
@@ -165,7 +165,7 @@ if __name__=='__main__':
     EEG.stop_acquisition()
 ```
 
-## 🧠 Class EEGAcquisitionManager <a name="eegacquisitionmanager"></a>
+## ⚙🧠 Class EEGAcquisitionManager <a name="eegacquisitionmanager"></a>
 
 Initializes the EEG acquisition system.
 
