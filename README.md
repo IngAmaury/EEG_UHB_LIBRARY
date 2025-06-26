@@ -4,8 +4,9 @@ Library for Electroencephalography (EEG) signal acquisition and processing using
 
 ## 📑 Contents
 - [Install](#install)
-  - [Installation from GitHub](#fromGithub)
   - [Installation in virtual environment](#inEnv)
+  - [Install on the whole system](#pypi)
+  - [Installation from GitHub](#fromGithub)
   - [Dependencies](#requirements)
 - [Upgrade or Uninstall](#upgrade-uninstall)
 - [Use Example](#example)
@@ -16,22 +17,7 @@ Library for Electroencephalography (EEG) signal acquisition and processing using
 
 ## ⏬ Install <a name="install"></a>
 
-> [!NOTE]
-> You should install it in a virtual environment to avoid conflicts with other system libraries. If you do not know the procedure to do it in a virtual environment go directly to the “Installation in a Python virtual environment” subsection of this “Install” section.
-
-You can install the library directly from PyPI using pip:
-
-```bash
-pip install eeg-uhb
-```
-
-### :octocat: <a name="fromGithub"></a> Installation from GitHub (optional) 
-
-If you want to install the latest version directly from the repository, run:
-
-```bash
-pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
-```
+Welcome to the installation guide for the EEG UHB Library! Whether you're setting up a controlled virtual environment or installing system-wide, follow these steps to get started quickly. For optimal compatibility and to avoid conflicts with other Python packages, we strongly recommend using a virtual environment. Also, it is necessary to have the UHB software, see “Dependencies” section.
 
 ### 🐍 <a name="inEnv"></a> Installation in a Python virtual environment 
 
@@ -74,6 +60,24 @@ source myenv/bin/activate
 ```bash
 pip install eeg-uhb
 ```
+### 🔽 <a name="pypi"></a> Install on the whole system 
+
+You can install the library directly from PyPI using pip:
+
+```bash
+pip install eeg-uhb
+```
+
+### :octocat: <a name="fromGithub"></a> Installation from GitHub (optional) 
+
+If you want to install the latest version directly from the repository, run:
+
+```bash
+pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
+```
+
+> [!NOTE]
+> You should install it in a virtual environment to avoid conflicts with other system libraries. If you do not know the procedure to do it in a virtual environment go directly to the “Installation in a Python virtual environment” subsection of this “Install” section.
 
 ### 🔨 Dependencies <a name="requirements"></a>
 
