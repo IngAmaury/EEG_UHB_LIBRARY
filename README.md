@@ -77,7 +77,7 @@ pip install git+https://github.com/IngAmaury/EEG_UHB_LIBRARY.git
 ```
 
 > [!NOTE]
-> You should install it in a virtual environment to avoid conflicts with other system libraries. If you do not know the procedure to do it in a virtual environment go directly to the “Installation in a Python virtual environment” subsection of this “Install” section.
+> You should install it in a virtual environment to avoid conflicts with other system libraries. If you do not know the procedure to do it in a virtual environment go back to the “Installation in a Python virtual environment” section.
 
 ### 🔨 Dependencies <a name="requirements"></a>
 
