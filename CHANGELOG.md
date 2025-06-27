@@ -7,6 +7,10 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - Support for multiple EEG devices (experimental)
 
+## [0.1.9] - 2025-06-25
+### Fixed
+- Added `numpy==1.26.4` and `packaging>=20.0` to resolve runtime errors related to binary compatibility and missing dependencies.
+
 ## [0.1.8] - 2025-06-25
 ### Fixed
 - Installation error on Python 3.12 due to missing `distutils`
