@@ -7,6 +7,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 - Support for multiple EEG devices (experimental)
 
+## [0.1.8] - 2025-06-25
+### Fixed
+- Installation error on Python 3.12 due to missing `distutils`
+- Ensured cross-platform installation without requiring compilation
+
 ## [0.1.7] - 2024-07-18
 ### Fixed
 - Added missing `networkx` dependency required by `scikit-fuzzy`
